@@ -1,0 +1,14 @@
+# File: .github/workflows/caller.yml
+name: Caller Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  call-reusable:
+    uses: ./.github/workflows/reusable.yml
+    with:
+      name: "Alpha"
+
